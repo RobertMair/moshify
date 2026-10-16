@@ -93,3 +93,65 @@ a {
         font-size: 1.5rem; /* 15px */
     }
 }
+
+/* Badges */
+
+.badge {
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    font-size: 2.0rem; /* 20px */
+    white-space: nowrap;
+}
+
+.badge--primary {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.badge--secondary {
+    background-color: var(--color-secondary);
+    color: #fff;
+}
+
+.badge--small {
+    font-size: 1.6rem; /* 16px */
+}
+
+@media (min-width: 1024px) {
+    .badge {
+        font-size: 1.5rem; /* 15px */
+    }
+    .badge--small {
+        font-size: 1.2rem; /* 12px */
+    }
+}
+
+/* Lists */
+
+.list {
+    padding-left: 0;
+    color: var(--color-headings);
+    list-style: none;
+}
+
+.list--inline .list__item {
+    display: inline-block;
+    margin-right: 2rem; /* Add some spacing between inline list items */
+}
+
+.list--tick {
+    padding-left: 3rem; /* Add some padding to align the tick image properly */
+    list-style-image: url(../images/tick.svg); /* Replace 'tick.png' with the path to your tick image */
+}
+
+.list--tick .list__item {
+    margin-bottom: 0.5rem; /* Add some spacing between tick list items */
+    padding-left: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .list--tick .list__item {
+        padding-left: 0; /* Remove padding for larger screens */
+    }
+}
