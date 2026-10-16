@@ -6,6 +6,8 @@
     --color-body: #918ca5;
 }
 
+/* Typography */
+
 html {
     font-size: 62.5%; /* Default is 16px, so 62.5% sets it to 10px */
 }
@@ -32,7 +34,7 @@ h2 {
 
 h3 {
     
-    font-size: 3em; /* 30px */
+    font-size: 3rem; /* 30px */
 }
 
 p {
@@ -46,7 +48,7 @@ p {
   font-optical-sizing: auto;
 } */
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
     body {
         font-size: 1.8rem; /* 18px */
     }
@@ -58,5 +60,36 @@ p {
     }
     h3 {
         font-size: 2.4rem; /* 24px */
+    }
+}
+
+/* Links */
+
+a {
+    text-decoration: none;
+}
+
+.link-arrow {
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 2rem; /* 20px */
+    text-transform: uppercase;
+}
+
+.link-arrow::after {
+    transition: margin-left 0.15s ease; /* Smooth transition for the arrow movement */
+    margin-left: 5px; /* Add some space between the link text and the arrow */
+    /* content: ' →'; */
+    content: "-->";
+}
+
+.link-arrow:hover::after {
+    margin-left: 10px; /* Increase the space between the link text and the arrow on hover */
+
+}
+
+@media (min-width: 1024px) {
+    .link-arrow {
+        font-size: 1.5rem; /* 15px */
     }
 }
