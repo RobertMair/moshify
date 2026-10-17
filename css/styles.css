@@ -1,44 +1,63 @@
+/* Global Styles */
+
 :root {
-    --color-primary: #2584ff;
-    --color-secondary: #00d9ff;
-    --color-accent: #ff3400;
-    --color-headings: #1b0760;
-    --color-body: #918ca5;
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #918ca5;
+  --color-border: #ccc;
+  --border-radius: 30px;
+  
+  --color-primary-dark: #1e6ed1;
+  --color-secondary-dark: #00b8cc;
+  --color-accent-dark: #e62e00;
+
+  --color-primary-light: #4da1ff;
+  --color-secondary-light: #33ebff;
+  --color-accent-light: #ff6b4d;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 /* Typography */
 
 html {
-    font-size: 62.5%; /* Default is 16px, so 62.5% sets it to 10px */
+  font-size: 62.5%; /* Default is 16px, so 62.5% sets it to 10px */
 }
 
 body {
-    color: var(--color-body);
-    font-size: 2.4rem; /* 24px */
-    line-height: 1.5; /* 36px */
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
+  color: var(--color-body);
+  font-size: 2.4rem; /* 24px */
+  line-height: 1.5; /* 36px */
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3 {
-    margin-bottom: 1rem;
-    color: var(--color-headings);
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  color: var(--color-headings);
 }
 
 h1 {
-    font-size: 7rem; /* 70px */
+  font-size: 7rem; /* 70px */
 }
 
 h2 {
-    font-size: 4rem; /* 40px */
+  font-size: 4rem; /* 40px */
 }
 
 h3 {
-    
-    font-size: 3rem; /* 30px */
+  font-size: 3rem; /* 30px */
 }
 
 p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 /* .inter-<uniquifier> {
@@ -49,130 +68,232 @@ p {
 } */
 
 @media (min-width: 1024px) {
-    body {
-        font-size: 1.8rem; /* 18px */
-    }
-    h1 {
-        font-size: 8rem; /* 80px */
-    }
-    h2 {
-        font-size: 4rem; /* 40px */
-    }
-    h3 {
-        font-size: 2.4rem; /* 24px */
-    }
+  body {
+    font-size: 1.8rem; /* 18px */
+  }
+  h1 {
+    font-size: 8rem; /* 80px */
+  }
+  h2 {
+    font-size: 4rem; /* 40px */
+  }
+  h3 {
+    font-size: 2.4rem; /* 24px */
+  }
 }
 
 /* Links */
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .link-arrow {
-    color: var(--color-accent);
-    font-weight: bold;
-    font-size: 2rem; /* 20px */
-    text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 2rem; /* 20px */
+  text-transform: uppercase;
 }
 
 .link-arrow::after {
-    transition: margin-left 0.15s ease; /* Smooth transition for the arrow movement */
-    margin-left: 5px; /* Add some space between the link text and the arrow */
-    /* content: ' →'; */
-    content: "-->";
+  transition: margin-left 0.15s ease; /* Smooth transition for the arrow movement */
+  margin-left: 5px; /* Add some space between the link text and the arrow */
+  /* content: ' →'; */
+  content: "-->";
 }
 
 .link-arrow:hover::after {
-    margin-left: 10px; /* Increase the space between the link text and the arrow on hover */
-
+  margin-left: 10px; /* Increase the space between the link text and the arrow on hover */
 }
 
 @media (min-width: 1024px) {
-    .link-arrow {
-        font-size: 1.5rem; /* 15px */
-    }
+  .link-arrow {
+    font-size: 1.5rem; /* 15px */
+  }
 }
 
 /* Badges */
 
 .badge {
-    border-radius: 20px;
-    padding: 0.5rem 2rem;
-    font-weight: 600;
-    font-size: 2.0rem; /* 20px */
-    white-space: nowrap;
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  font-size: 2rem; /* 20px */
+  white-space: nowrap;
 }
 
 .badge--primary {
-    background-color: var(--color-primary);
-    color: #fff;
+  background-color: var(--color-primary);
+  color: white;
 }
 
 .badge--secondary {
-    background-color: var(--color-secondary);
-    color: #fff;
+  background-color: var(--color-secondary);
+  color: white;
 }
 
 .badge--small {
-    font-size: 1.6rem; /* 16px */
+  font-size: 1.6rem; /* 16px */
 }
 
 @media (min-width: 1024px) {
-    .badge {
-        font-size: 1.5rem; /* 15px */
-    }
-    .badge--small {
-        font-size: 1.2rem; /* 12px */
-    }
+  .badge {
+    font-size: 1.5rem; /* 15px */
+  }
+  .badge--small {
+    font-size: 1.2rem; /* 12px */
+  }
 }
 
 /* Lists */
 
 .list {
-    padding-left: 0;
-    color: var(--color-headings);
-    list-style: none;
+  padding-left: 0;
+  color: var(--color-headings);
+  list-style: none;
 }
 
 .list--inline .list__item {
-    display: inline-block;
-    margin-right: 2rem; /* Add some spacing between inline list items */
+  display: inline-block;
+  margin-right: 2rem; /* Add some spacing between inline list items */
 }
 
 .list--tick {
-    padding-left: 3rem; /* Add some padding to align the tick image properly */
-    list-style-image: url(../images/tick.svg); /* Replace 'tick.png' with the path to your tick image */
+  padding-left: 3rem; /* Add some padding to align the tick image properly */
+  list-style-image: url(../images/tick.svg); /* Replace 'tick.png' with the path to your tick image */
 }
 
 .list--tick .list__item {
-    margin-bottom: 0.5rem; /* Add some spacing between tick list items */
-    padding-left: 1rem;
+  margin-bottom: 0.5rem; /* Add some spacing between tick list items */
+  padding-left: 1rem;
 }
 
 @media (min-width: 1024px) {
-    .list--tick .list__item {
-        padding-left: 0; /* Remove padding for larger screens */
-    }
+  .list--tick .list__item {
+    padding-left: 0; /* Remove padding for larger screens */
+  }
 }
 
 /* Icons */
 
-.icon {    
-    width: 40px;
-    height: 40px;
+.icon {
+  width: 40px;
+  height: 40px;
 }
 
 .icon--primary {
-    fill: var(--color-primary);
+  fill: var(--color-primary);
 }
 
 .icon-container {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background: #f3f9fa;
-    width: 64px;
-    height: 64px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+}
+
+/* Buttons */
+
+.btn {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin: 1rem 0;
+  border: none; /* Remove default border */
+  border-radius: var(--border-radius); /* Add some border radius for rounded corners */
+  padding: 2rem 3rem; /* Add some padding to the button */
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase; /* Make button text uppercase */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-light);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-secondary-light);
+}
+
+.btn--accent:hover {
+  background-color: var(--color-accent-light);
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.btn--accent {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.btn--outline {
+  border: 2px solid var(--color-headings); /* Add a border to make it look like an outline button */
+  background: white;
+  color: var(--color-headings);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-headings);
+  color: white;
+}
+
+.btn--block {
+  display: inline-block;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem; /* Increase button font size for larger screens */
+  }
+}
+
+/* Inputs */
+
+.input {
+  box-sizing: border-box;
+  outline: none; /* Remove default outline on focus */
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 1.5rem 3.5rem;
+  width: 100%;
+  color: var(--color-headings); /* Set the text color for the input */
+  font-size: 2rem; /* Set the font size for the input */
+}
+
+::placeholder {
+  color: var(--color-border); /* Set the placeholder text color */
+}
+
+.input--group {
+    display: flex;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+}
+
+.input--group .input {
+    flex-grow: 1;
+    border: none;
+    padding: 1.5rem 1rem;
+}
+
+.input--group .btn {
+ margin: 4px;
+}
+
+@media (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem; /* Increase input font size for larger screens */
+  }
 }
