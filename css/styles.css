@@ -8,7 +8,7 @@
   --color-body: #918ca5;
   --color-border: #ccc;
   --border-radius: 30px;
-  
+
   --color-primary-dark: #1e6ed1;
   --color-secondary-dark: #00b8cc;
   --color-accent-dark: #e62e00;
@@ -27,6 +27,7 @@
 /* Typography */
 
 html {
+  padding: 2rem; /* Add some padding to the html element */
   font-size: 62.5%; /* Default is 16px, so 62.5% sets it to 10px */
 }
 
@@ -133,6 +134,7 @@ a {
 }
 
 .badge--small {
+  padding: 0.5rem 1.5rem; /* Adjust padding for small badges */
   font-size: 1.6rem; /* 16px */
 }
 
@@ -198,10 +200,13 @@ a {
 /* Buttons */
 
 .btn {
+  display: inline-block; /* Ensure buttons are inline-block elements */
   cursor: pointer; /* Change cursor to pointer on hover */
   margin: 1rem 0;
   border: none; /* Remove default border */
-  border-radius: var(--border-radius); /* Add some border radius for rounded corners */
+  border-radius: var(
+    --border-radius
+  ); /* Add some border radius for rounded corners */
   padding: 2rem 3rem; /* Add some padding to the button */
   font-weight: 600;
   font-size: 1.8rem;
@@ -262,7 +267,9 @@ a {
 /* Inputs */
 
 .input {
+  display: inline-block; /* Ensure inputs are inline-block elements */
   box-sizing: border-box;
+  margin: 1rem 0;
   outline: none; /* Remove default outline on focus */
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
@@ -277,19 +284,20 @@ a {
 }
 
 .input--group {
-    display: flex;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
+  display: flex;
+  margin: 1rem 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
 }
 
 .input--group .input {
-    flex-grow: 1;
-    border: none;
-    padding: 1.5rem 1rem;
+  flex-grow: 1;
+  border: none;
+  padding: 1.5rem 1rem;
 }
 
 .input--group .btn {
- margin: 4px;
+  margin: 4px;
 }
 
 @media (min-width: 1024px) {
@@ -297,3 +305,91 @@ a {
     font-size: 1.5rem; /* Increase input font size for larger screens */
   }
 }
+
+/* Cards */
+
+.card {
+  margin: 1rem 0;
+  box-shadow: 7px 7px 15px 1px var(--color-border);
+  border-radius: 7px;
+  overflow: hidden; /* Ensure content doesn't overflow the card */
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+  background: var(--color-primary);
+  color: white;
+}
+
+.card--secondary .card__header {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
+
+/* Plans */
+
+.plan__name {
+  margin: 0;
+  color: white;
+  font-weight: 500;
+  font-size: 2.4rem; /* Set the font size for the plan name */
+}
+
+.plan__price {
+  font-size: 6rem;
+}
+
+.plan__billing-cycle {
+  opacity: 0.8;
+  margin-right: 1rem;
+  font-weight: 300;
+  font-size: 2.4rem;
+}
+
+.plan__description {
+  display: block; /* Ensure the plan description takes up the full width */
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 1px; /* Adjust letter spacing for the plan description */
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+
+.plan--popular .card__header {
+  position: relative; /* Ensure the pseudo-element is positioned relative to the header */
+}
+
+.plan--popular .card__header::before {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 40px;
+  content: url('../images/popular.svg');
+}
+
+@media (min-width: 1024px) {
+  .plan__name {
+    font-size: 1.4rem; /* Increase plan name font size for larger screens */
+  }
+  .plan__price {
+    font-size: 5rem;
+  }
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+  .plan__description {
+    font-size: 1.7rem;
+  }
+}
+
