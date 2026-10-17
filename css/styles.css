@@ -12,6 +12,7 @@
   --color-primary-dark: #1e6ed1;
   --color-secondary-dark: #00b8cc;
   --color-accent-dark: #e62e00;
+  --color-body-dark: #5c5577;
 
   --color-primary-light: #4da1ff;
   --color-secondary-light: #33ebff;
@@ -375,7 +376,7 @@ a {
   top: 0;
   right: 5%;
   width: 40px;
-  content: url('../images/popular.svg');
+  content: url("../images/popular.svg");
 }
 
 @media (min-width: 1024px) {
@@ -408,5 +409,53 @@ a {
 }
 
 .media__image {
-    margin-top: 1rem;
+  margin-top: 1rem;
+}
+
+/* Quotes */
+
+.quote {
+  color: var(--color-body-dark);
+  font-style: italic;
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+.quote__text::before {
+  content: open-quote;
+}
+
+.quote__text::after {
+  content: close-quote;
+}
+
+.quote__author {
+  margin-bottom: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.quote__organisation {
+  opacity: 0.4;
+  color: var(--color-headings);
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.quote__line {
+  position: relative; /* Ensure the line is positioned relative to its container */
+  bottom: 10px;
+}
+
+@media (min-width: 1024px) {
+  .quote {
+    font-size: 2rem; /* Increase quote font size for larger screens */
+  }
+  .quote__author {
+    font-size: 2.4rem; /* Adjust font size for larger screens */
+  }
+  .quote__organisation {
+    font-size: 1.6rem; /* Adjust font size for larger screens */
+  }
 }
