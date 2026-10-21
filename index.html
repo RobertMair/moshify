@@ -17,6 +17,7 @@
 
 <body>
 
+    <!-- Navigation Bar Component -->
     <header>
         <nav class="nav collapsible">
             <a aria-label="Moshify" class="nav__brand" href="/"><img src="images/logo.svg" alt="" /></a>
@@ -40,17 +41,22 @@
         </nav>
     </header>
 
+    <!-- Typography Examples -->
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
     <h3>Heading 3</h3>
     <p>This is a paragraph to demonstrate the body text styling with the Inter font.</p>
+
+    <!-- Link Component -->
     <a href="#" class="link-arrow">Learn More</a>
 
+    <!-- Badge Component -->
     <span class="badge badge--primary">Primary Badge</span>
     <span class="badge badge--primary badge--small">Primary Small Badge</span>
     <span class="badge badge--secondary">Secondary Badge</span>
     <span class="badge badge--secondary badge--small">Secondary Small Badge</span>
 
+    <!-- List Component -->
     <ul class="list list--inline">
         <li class="list__item">Item 1</li>
         <li class="list__item">Item 2</li>
@@ -63,12 +69,14 @@
         <li class="list__item">Item 3</li>
     </ul>
 
+    <!-- Icon Component -->
     <span class="icon-container">
         <svg class="icon">
             <use xlink:href="images/sprite.svg#wordpress"></use>
         </svg>
     </span>
 
+    <!-- Button Component -->
     <button class="btn btn--primary btn--block">Primary Button Block</button>
     <button class="btn btn--secondary">Secondary Button</button>
     <button class="btn btn--accent">Accent Button</button>
@@ -79,11 +87,28 @@
     <br>
     <a href="#" class="btn btn--primary btn--outline">Outline Link Button</a>
 
+    <!-- Input Component -->
+    <input type="text" class="input input--large" placeholder="Enter domain name here...">
+
+
+    <!-- Input Group Component -->
     <div class="input--group">
         <input type="text" class="input" placeholder="Enter domain name here...">
         <button class="btn btn--accent">Search</button>
     </div>
 
+    <!-- Card Component -->
+    <div style="width:50%; padding: 4rem">
+        <div class="card card--secondary">
+            <header class="card__header">
+                Card Title</header>
+            <div class="card__body">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, voluptatibus!
+            </div>
+        </div>
+    </div>
+
+    <!-- Plan Component -->
     <div style="width:50%">
         <div class="plan plan--popular">
             <div class="card card--secondary">
@@ -107,6 +132,7 @@
         </div>
     </div>
 
+    <!-- Media Component -->
     <div class="media">
         <div class="media__image">
             <svg class="icon">
@@ -120,6 +146,7 @@
         </div>
     </div>
 
+    <!-- Quote Component -->
     <blockquote class="quote">
         <p class="quote__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minima repellat deleniti
             nihil accusamus perferendis, esse sit vel provident nemo.</p>
@@ -138,11 +165,13 @@
         </footer>
     </blockquote>
 
+    <!-- Grid Component -->
     <div class="grid grid--cols-2">
         <div style="height: 100px; background: gold"></div>
         <div style="height: 100px; background: dodgerblue"></div>
     </div>
 
+    <!-- Testimonial Component -->
     <div class="card testimonial">
         <div class="grid grid--cols-2">
             <div class="testimonial__image">
@@ -174,6 +203,7 @@
         </div>
     </div>
 
+    <!-- Callout Component -->
     <div class="callout callout--primary">
         <div class="grid grid--cols-2">
 
@@ -186,6 +216,7 @@
         </div>
     </div>
 
+    <!-- Collapsible Component -->
     <div class="collapsible collapsible--expanded">
         <header class="collapsible__header">
             <h2 class="collapsible__heading">Item 1</h2>
@@ -198,6 +229,7 @@
         </div>
     </div>
 
+    <!-- Block Component -->
     <section class="block">
         <div class="container">
             <header class="block__header">
@@ -216,6 +248,7 @@
         </div>
     </section>
 
+    <!-- Hero Block Component -->
     <section class="block block--dark block--skewed-left">
         <div class="container grid grid--cols-2">
             <header class="block__header hero__content">
@@ -231,6 +264,7 @@
         </div>
     </section>
 
+    <!-- Domain Block Component -->
     <section class="block container block-domain">
         <header class="block__header">
             <h2 class="block__heading">Starting at $9 per month</h2>
@@ -467,6 +501,48 @@
                 </li>
             </ul>
         </container>
+    </section>
+
+    <!-- Testimonials Block -->
+    <section class="block">
+        <header class="block__header">
+            <h2>What our Customers are Saying</h2>
+            <p class="lorem10">Our customers love the ease of use and powerful features of our platform.</p>
+        </header>
+        <div class="container">
+            <!-- Testimonials Component -->
+            <div class="card testimonial">
+                <div class="grid grid--cols-2">
+                    <div class="testimonial__image">
+                        <img src="images/testimonial.jpg" alt="A happy, smiling customer">
+                        <span class="icon-container icon-container--accent">
+                            <svg class="icon icon--white icon--small">
+                                <use xlink:href="images/sprite.svg#quotes"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <blockquote class="quote">
+                        <p class="quote__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minima
+                            repellat
+                            deleniti
+                            nihil accusamus perferendis, esse sit vel provident nemo.</p>
+                        <footer>
+                            <div class="media">
+                                <div class="media__image">
+                                    <svg class="icon icon--primary quote__line">
+                                        <use xlink:href="images/sprite.svg#line"></use>
+                                    </svg>
+                                </div>
+                                <div class="media__body">
+                                    <h3 class="media__title quote__author">John Smith</h3>
+                                    <p class="quote__organisation">ABC Company</p>
+                                </div>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
     </section>
 
 </body>

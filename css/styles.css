@@ -652,6 +652,7 @@ a {
 }
 
 .block__header {
+  margin-bottom: 4rem; /* Add spacing below the block header */
   text-align: center;
 }
 
